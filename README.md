@@ -31,8 +31,9 @@ Alle teksten staan in `index.html`. Zoek de sectie die je wilt wijzigen
 huidige teksten zijn een startpunt — pas ze gerust aan naar jouw eigen woorden.
 
 Een paar dingen die je waarschijnlijk wilt aanpassen:
-- **E-mailadres:** staat op twee plekken in `index.html` (zoek op `levikats@hotmail.nl`).
-  Wil je een net zakelijk adres zoals `info@levidegoochelaar.nl`? Vervang het daar.
+- **E-mailadres:** staat op twee plekken in `index.html` (zoek op `info@levidegoochelaar.nl`).
+  Let op: zorg dat je dit mailadres ook echt instelt bij je domein-/mailprovider,
+  zodat berichten aankomen. (Wil je toch een ander adres? Vervang het daar.)
 - **Reviews:** de reviews zijn nu voorbeelden. Vervang ze door echte reacties.
 - **Aantal optredens:** het "100+" bolletje bij je portret in de `<!-- OVER LEVI -->` sectie.
 
