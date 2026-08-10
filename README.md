@@ -1,10 +1,11 @@
 # Levi de Goochelaar — website
 
 De officiële website van Levi de Goochelaar. Een snelle, moderne one-page site
-(HTML, CSS en een klein beetje JavaScript) zonder afhankelijkheden — hij werkt
-overal en laadt razendsnel.
+(HTML, CSS en een klein beetje JavaScript) met een ingebouwd **beheerpaneel**
+waarin je zelf de teksten kunt aanpassen.
 
 **Live domein:** https://levidegoochelaar.nl
+**Beheerpaneel:** https://levidegoochelaar.nl/admin
 
 ---
 
@@ -14,87 +15,92 @@ overal en laadt razendsnel.
 levidegoochelaar/
 ├─ index.html          # De volledige pagina
 ├─ styles.css          # Alle styling
-├─ script.js           # Menu, scroll-animaties, jaartal
-├─ CNAME               # Koppelt GitHub Pages aan levidegoochelaar.nl
-├─ .nojekyll           # Zorgt dat GitHub Pages alle bestanden serveert
+├─ script.js           # Menu, animaties, laadt de teksten in
+├─ content/
+│  └─ site.json        # Alle teksten (worden via /admin bewerkt)
+├─ admin/
+│  ├─ index.html       # Het beheerpaneel (Decap CMS)
+│  └─ config.yml        # Welke velden je kunt bewerken
+├─ netlify.toml        # Netlify-instellingen
+├─ CNAME               # Domeinnaam (voor GitHub Pages; op Netlify genegeerd)
 └─ assets/img/         # Alle afbeeldingen (geoptimaliseerd voor web)
 ```
 
-## 👀 Lokaal bekijken
+## 🧩 Hoe werkt het beheerpaneel?
 
-Open `index.html` gewoon in je browser (dubbelklikken).
+De teksten van de site staan in `content/site.json`. De website laadt dat bestand
+in en toont de teksten. In het beheerpaneel (`/admin`) pas je die teksten aan in
+nette invulvelden; bij "Publiceren" wordt `content/site.json` automatisch
+bijgewerkt in je GitHub-repo en zet Netlify de nieuwe versie live. Meestal binnen
+een minuut zichtbaar.
 
-## ✏️ Tekst aanpassen
-
-Alle teksten staan in `index.html`. Zoek de sectie die je wilt wijzigen
-(bijv. `<!-- OVER LEVI -->`) en pas de tekst tussen de tags aan. De
-huidige teksten zijn een startpunt — pas ze gerust aan naar jouw eigen woorden.
-
-Een paar dingen die je waarschijnlijk wilt aanpassen:
-- **E-mailadres:** staat op twee plekken in `index.html` (zoek op `info@levidegoochelaar.nl`).
-  Let op: zorg dat je dit mailadres ook echt instelt bij je domein-/mailprovider,
-  zodat berichten aankomen. (Wil je toch een ander adres? Vervang het daar.)
-- **Reviews:** de reviews zijn nu voorbeelden. Vervang ze door echte reacties.
-- **Aantal optredens:** het "100+" bolletje bij je portret in de `<!-- OVER LEVI -->` sectie.
-
-## 🖼️ Foto's vervangen
-
-Zet nieuwe foto's in `assets/img/` en verwijs ernaar in `index.html`.
-Houd bestanden klein (max ~1600px breed) zodat de site snel blijft.
+> De teksten in `index.html` zijn een **reservekopie** die verschijnt als er iets
+> misgaat met laden. Bewerk je teksten voortaan via `/admin`, niet in de HTML.
 
 ---
 
-## 🚀 Online zetten via GitHub Pages (gratis) + je domein koppelen
+## 🚀 Online zetten + beheerpaneel activeren (Netlify)
+
+Je hebt gekozen voor Netlify: je code staat op **GitHub**, en **Netlify** host de
+site, regelt HTTPS én verzorgt het inloggen op het beheerpaneel.
 
 ### Stap 1 — Zet de code op GitHub
-1. Maak een gratis account op https://github.com (als je die nog niet hebt).
-2. Maak een nieuwe **repository** aan, bijvoorbeeld `levidegoochelaar`.
-   Kies **Public**. Vink géén README/gitignore aan (die hebben we al).
-3. Volg op de GitHub-pagina de instructie "…or push an existing repository",
-   of gebruik in deze map:
+1. Maak een gratis account op https://github.com.
+2. Maak een nieuwe **repository** aan, bijv. `levidegoochelaar` (Public). Vink
+   géén README/gitignore aan; die zitten er al in.
+3. Push deze map (zie de commando's die GitHub toont, of):
    ```bash
    git remote add origin https://github.com/JOUW-NAAM/levidegoochelaar.git
    git branch -M main
    git push -u origin main
    ```
 
-### Stap 2 — Zet GitHub Pages aan
-1. Ga in je repository naar **Settings → Pages**.
-2. Bij "Build and deployment" → Source: **Deploy from a branch**.
-3. Branch: **main**, map: **/ (root)**. Klik **Save**.
-4. Na een minuutje staat de site live op `https://JOUW-NAAM.github.io/levidegoochelaar/`.
+### Stap 2 — Koppel GitHub aan Netlify
+1. Maak een gratis account op https://netlify.com (kies "Sign up with GitHub").
+2. Klik **Add new site → Import an existing project → GitHub** en kies je
+   `levidegoochelaar`-repo.
+3. Build settings mag je leeg laten (het is een statische site). Publish
+   directory: `.` (staat al in `netlify.toml`). Klik **Deploy**.
+4. Na een halve minuut staat je site live op een tijdelijk adres zoals
+   `https://willekeurige-naam.netlify.app`.
 
-### Stap 3 — Koppel je domein levidegoochelaar.nl
-Het bestand `CNAME` zorgt er al voor dat GitHub weet welk domein bij de site hoort.
-Je hoeft alleen nog bij je **domeinprovider** (waar je levidegoochelaar.nl hebt gekocht)
-de DNS-instellingen aan te passen:
+### Stap 3 — Zet het inloggen aan (Netlify Identity + Git Gateway)
+Dit is nodig zodat jij (en niemand anders) kunt inloggen op `/admin`.
+1. In je Netlify-site: **Integrations / Identity** → klik **Enable Identity**.
+2. Ga naar **Identity → Services → Git Gateway** en klik **Enable Git Gateway**.
+3. Onder **Identity → Registration** zet je "Registration" op **Invite only**
+   (zodat niet zomaar iemand een account kan aanmaken).
+4. Klik **Identity → Invite users** en nodig je eigen e-mailadres uit. Je krijgt
+   een mailtje; klik de link en kies een wachtwoord.
+5. Ga nu naar `https://JOUW-SITE.netlify.app/admin` en log in. Klaar!
 
-**Voor het hoofddomein (levidegoochelaar.nl)** — voeg 4 A-records toe die naar GitHub wijzen:
-```
-A   @   185.199.108.153
-A   @   185.199.109.153
-A   @   185.199.110.153
-A   @   185.199.111.153
-```
+### Stap 4 — Koppel je domein levidegoochelaar.nl
+1. In Netlify: **Domain management → Add a domain** → typ `levidegoochelaar.nl`.
+2. Netlify laat zien welke DNS-instellingen je bij je **domeinprovider** (waar je
+   het domein hebt gekocht) moet zetten. Er zijn twee manieren:
+   - **Makkelijkst:** de nameservers van je domein wijzigen naar die van Netlify
+     (Netlify beheert dan alles). Netlify toont de exacte nameservers.
+   - **Of** handmatig records zetten: een `A`-record voor het hoofddomein naar
+     het IP dat Netlify toont, en een `CNAME` voor `www` naar je
+     `JOUW-SITE.netlify.app`.
+3. Zet in Netlify **HTTPS** aan (gebeurt meestal automatisch zodra de DNS klopt).
 
-**Voor www (www.levidegoochelaar.nl)** — voeg een CNAME-record toe:
-```
-CNAME   www   JOUW-NAAM.github.io
-```
-
-4. Ga daarna terug naar **Settings → Pages** en vul bij "Custom domain"
-   `levidegoochelaar.nl` in. Zet **"Enforce HTTPS"** aan (kan even duren voor
-   het certificaat klaar is).
-
-> DNS-wijzigingen kunnen tot ~24 uur duren voordat ze wereldwijd actief zijn.
-> Meestal gaat het een stuk sneller.
+> DNS-wijzigingen kunnen tot ~24 uur duren voordat ze wereldwijd actief zijn;
+> vaak gaat het sneller.
 
 ---
 
-### Alternatief: nog makkelijker met Netlify
-Geen zin in DNS-gedoe? Op https://netlify.com kun je deze map slepen (of je
-GitHub-repo koppelen) en in de interface je domein toevoegen. Netlify regelt
-HTTPS en geeft je duidelijke DNS-instructies.
+## ✏️ Teksten aanpassen (dagelijks gebruik)
+1. Ga naar https://levidegoochelaar.nl/admin en log in.
+2. Klik op **Website → Teksten van de website**.
+3. Pas aan wat je wilt en klik **Publiceren**.
+4. Even wachten — je wijziging staat live.
+
+## 🖼️ Foto's vervangen
+Foto's vervang je (voorlopig) in de map `assets/img/`: zet een nieuw bestand
+neer met dezelfde naam, of pas de verwijzing in `index.html` aan. Houd bestanden
+klein (max ~1600px breed) zodat de site snel blijft. (Wil je foto's ook via het
+beheerpaneel kunnen wisselen? Dat kan ik toevoegen.)
 
 ---
 

@@ -1,0 +1,10 @@
+# Netlify-configuratie voor een statische site (geen build-stap nodig).
+[build]
+  publish = "."
+
+# Nette adressen en beveiligingsheaders
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

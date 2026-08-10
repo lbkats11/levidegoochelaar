@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "eyebrow": "Goochelaar · Illusionist · Entertainer",
+    "titleTop": "Een magische ervaring",
+    "titleBottom": "voor iedereen",
+    "lead": "Verbazing op armlengte. Ik betover je gasten met close-up magie, een verrassende podiumshow en momenten die nog wekenlang het gesprek van de dag zijn.",
+    "ctaPrimary": "Boek een optreden",
+    "ctaSecondary": "Bekijk de shows"
+  },
+  "about": {
+    "eyebrow": "Maak kennis",
+    "heading": "Hoi, ik ben Levi",
+    "p1": "Al van jongs af aan ben ik gefascineerd door dat ene moment waarop iemand zijn ogen niet gelooft. Die glimlach van pure verwondering — dáár doe ik het voor. Inmiddels reis ik door heel Nederland om mensen te verrassen met magie die van dichtbij gebeurt, in hún handen.",
+    "p2": "Mijn stijl is elegant, persoonlijk en vooral gezellig. Geen afstandelijke trucs, maar echte interactie waarbij jij en je gasten de sterren van de show zijn. Van een intieme borrel tot een groot podium: ik pas de magie aan op de sfeer van jouw gelegenheid.",
+    "list": [
+      "Gespecialiseerd in close-up kaart- & muntmagie",
+      "Persoonlijk, interactief en op maat",
+      "Ervaren met publiek van jong tot oud"
+    ],
+    "badgeNumber": "100+",
+    "badgeLabel": "optredens per jaar"
+  },
+  "shows": {
+    "eyebrow": "Wat ik doe",
+    "heading": "Kies jouw soort magie",
+    "sub": "Elke show is aan te passen aan je publiek, locatie en tijdsduur.",
+    "items": [
+      {
+        "title": "Close-up magie",
+        "text": "Magie die letterlijk in de handen van je gasten gebeurt. Perfect als rondlopend entertainment tijdens een borrel, diner of receptie."
+      },
+      {
+        "title": "Podiumshow",
+        "text": "Een meeslepende show vol humor, verbazing en interactie. Een klapper als hoofdprogramma of gouden randje voor je evenement."
+      },
+      {
+        "title": "Mentalisme",
+        "text": "Gedachten die worden geraden en voorspellingen die uitkomen. Verfijnde magie die je gasten laat twijfelen aan wat écht mogelijk is."
+      },
+      {
+        "title": "Kindershow",
+        "text": "Vrolijke, interactieve magie op kinderhoogte. Lachen, meedoen en ogen die groot worden van verbazing — een onvergetelijk feestje."
+      }
+    ]
+  },
+  "occasions": {
+    "eyebrow": "Voor elke gelegenheid",
+    "heading": "Waar magie het verschil maakt",
+    "items": [
+      { "title": "Bruiloften", "text": "Verras je gasten tijdens het borreluur of laat de avond magisch beginnen." },
+      { "title": "Bedrijfsfeesten", "text": "Ideaal ijsbreker die collega's en relaties met elkaar in gesprek brengt." },
+      { "title": "Festivals & events", "text": "Rondlopende magie die de sfeer op je terrein naar een hoger niveau tilt." },
+      { "title": "Verjaardagen", "text": "Van kinderfeestjes tot mijlpalen: een verrassing die niemand verwacht." },
+      { "title": "Jubilea", "text": "Een bijzonder moment magisch onderstrepen, precies op maat gemaakt." },
+      { "title": "Iets anders?", "text": "Vertel me over je plannen — samen maken we er iets magisch van." }
+    ]
+  },
+  "gallery": {
+    "eyebrow": "In actie",
+    "heading": "Foto's",
+    "sub": "Een indruk van optredens en momenten."
+  },
+  "reviews": {
+    "eyebrow": "Wat anderen zeggen",
+    "heading": "Reviews",
+    "items": [
+      { "quote": "\"Levi maakte van onze bruiloft een onvergetelijke dag. Onze gasten hebben het er nóg over!\"", "author": "— Sanne & Tom" },
+      { "quote": "\"Perfecte ijsbreker op ons bedrijfsevent. Professioneel, grappig en écht verbluffend.\"", "author": "— Marloes, HR-manager" },
+      { "quote": "\"De kinderen (en de ouders!) zaten aan zijn lippen. Absolute aanrader voor elk feest.\"", "author": "— Familie Jansen" }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Boek een optreden",
+    "heading": "Laten we iets magisch maken",
+    "intro": "Vertel me kort over je gelegenheid, de datum en de locatie. Ik neem zo snel mogelijk contact met je op met de mogelijkheden en een offerte op maat.",
+    "email": "info@levidegoochelaar.nl",
+    "detailLocation": "Optredens door heel Nederland",
+    "detailResponse": "Reactie binnen 24 uur"
+  }
+}

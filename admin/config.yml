@@ -1,0 +1,115 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Taal van het beheerpaneel
+locale: nl
+
+# Map voor eventueel geüploade afbeeldingen
+media_folder: "assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+# Nette Nederlandse labels voor de commit-berichten
+site_url: https://levidegoochelaar.nl
+display_url: https://levidegoochelaar.nl
+
+collections:
+  - name: "content"
+    label: "Website"
+    description: "Pas hier de teksten van de website aan."
+    delete: false
+    files:
+      - name: "site"
+        label: "Teksten van de website"
+        file: "content/site.json"
+        format: "json"
+        editor:
+          preview: false
+        fields:
+          - label: "Hero (bovenaan de pagina)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Bovenschrift", name: "eyebrow", widget: "string" }
+              - { label: "Titel — regel 1", name: "titleTop", widget: "string" }
+              - { label: "Titel — regel 2 (goud)", name: "titleBottom", widget: "string" }
+              - { label: "Inleidende tekst", name: "lead", widget: "text" }
+              - { label: "Knop 1 (tekst)", name: "ctaPrimary", widget: "string" }
+              - { label: "Knop 2 (tekst)", name: "ctaSecondary", widget: "string" }
+
+          - label: "Over Levi"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Bovenschrift", name: "eyebrow", widget: "string" }
+              - { label: "Kop", name: "heading", widget: "string" }
+              - { label: "Alinea 1", name: "p1", widget: "text" }
+              - { label: "Alinea 2", name: "p2", widget: "text" }
+              - label: "Kenmerken (lijstje)"
+                name: "list"
+                widget: "list"
+                field: { label: "Kenmerk", name: "item", widget: "string" }
+              - { label: "Badge — getal", name: "badgeNumber", widget: "string" }
+              - { label: "Badge — tekst", name: "badgeLabel", widget: "string" }
+
+          - label: "Shows"
+            name: "shows"
+            widget: "object"
+            fields:
+              - { label: "Bovenschrift", name: "eyebrow", widget: "string" }
+              - { label: "Kop", name: "heading", widget: "string" }
+              - { label: "Ondertitel", name: "sub", widget: "string" }
+              - label: "Shows"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Titel", name: "title", widget: "string" }
+                  - { label: "Beschrijving", name: "text", widget: "text" }
+
+          - label: "Gelegenheden"
+            name: "occasions"
+            widget: "object"
+            fields:
+              - { label: "Bovenschrift", name: "eyebrow", widget: "string" }
+              - { label: "Kop", name: "heading", widget: "string" }
+              - label: "Gelegenheden"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Titel", name: "title", widget: "string" }
+                  - { label: "Beschrijving", name: "text", widget: "text" }
+
+          - label: "Foto's (kopteksten)"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - { label: "Bovenschrift", name: "eyebrow", widget: "string" }
+              - { label: "Kop", name: "heading", widget: "string" }
+              - { label: "Ondertitel", name: "sub", widget: "string" }
+
+          - label: "Reviews"
+            name: "reviews"
+            widget: "object"
+            fields:
+              - { label: "Bovenschrift", name: "eyebrow", widget: "string" }
+              - { label: "Kop", name: "heading", widget: "string" }
+              - label: "Reviews"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.author}}"
+                fields:
+                  - { label: "Quote", name: "quote", widget: "text" }
+                  - { label: "Naam / bron", name: "author", widget: "string" }
+
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Bovenschrift", name: "eyebrow", widget: "string" }
+              - { label: "Kop", name: "heading", widget: "string" }
+              - { label: "Inleidende tekst", name: "intro", widget: "text" }
+              - { label: "E-mailadres", name: "email", widget: "string" }
+              - { label: "Detail — locatie", name: "detailLocation", widget: "string" }
+              - { label: "Detail — reactietijd", name: "detailResponse", widget: "string" }
