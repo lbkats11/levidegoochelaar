@@ -134,7 +134,11 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.1; lett
   box-shadow: inset 0 0 60px rgba(201,154,91,.18);
 }
 .hero__figure {
-  position: relative; width: min(26rem, 74vw);
+  position: relative;
+  width: auto; height: auto;
+  max-width: min(26rem, 74vw);
+  max-height: 30rem;
+  object-fit: contain;
   filter: drop-shadow(0 30px 40px rgba(0,0,0,.45));
   animation: floaty 6s ease-in-out infinite;
 }
