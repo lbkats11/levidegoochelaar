@@ -37,6 +37,20 @@
     renderShows(data);
     renderOccasions(data);
     renderGallery(data);
+    applyWhatsApp(data);
+  }
+
+  // Zet het telefoonnummer om naar internationaal formaat voor WhatsApp
+  // (bijv. "06 40 49 41 89" -> "31640494189") en vult de wa.me-links.
+  function applyWhatsApp(data) {
+    var phone = data && data.contact && data.contact.phone;
+    if (!phone) return;
+    var digits = phone.replace(/[^0-9]/g, "");
+    if (digits.indexOf("00") === 0) digits = digits.slice(2);
+    else if (digits.charAt(0) === "0") digits = "31" + digits.slice(1);
+    document.querySelectorAll("[data-wa]").forEach(function (el) {
+      el.setAttribute("href", "https://wa.me/" + digits);
+    });
   }
 
   // Bouwt de shows-kaarten opnieuw op uit content/site.json,
