@@ -322,6 +322,16 @@
     </div>
   </footer>
 
+  <!-- Verborgen hulpformulier: zorgt dat Netlify het contactformulier altijd
+       herkent bij een deploy (officieel aanbevolen). Wordt nooit getoond of verstuurd. -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="Naam" />
+    <input type="email" name="Email" />
+    <input type="text" name="Gelegenheid" />
+    <input type="date" name="Datum" />
+    <textarea name="Bericht"></textarea>
+  </form>
+
   <!-- Netlify Identity: nodig voor het inloggen op /admin -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
