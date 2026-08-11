@@ -22,11 +22,10 @@
         el.setAttribute("src", value);
       } else {
         el.textContent = value;
-        // E-mailadres: werk ook de mailto-link en het formulier bij
+        // E-mailadres: werk ook de mailto-link bij (het contactformulier
+        // loopt via Netlify Forms en heeft geen mailto-actie nodig)
         if (el.hasAttribute("data-cms-email")) {
           el.setAttribute("href", "mailto:" + value);
-          var form = document.getElementById("contactForm");
-          if (form) form.setAttribute("action", "mailto:" + value);
         }
       }
     });

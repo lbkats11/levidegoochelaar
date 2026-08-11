@@ -107,6 +107,23 @@ Foto's ga je net als teksten via het beheerpaneel beheren:
 Geüploade foto's komen in de map `assets/img/uploads/`. Houd bestanden bij
 voorkeur klein (max ~1600px breed) zodat de site snel blijft laden.
 
+## 📨 Contactformulier
+Het formulier werkt via **Netlify Forms**. Elke aanvraag wordt opgeslagen in je
+Netlify-dashboard (**Forms**) en kan naar je gemaild worden.
+
+**Eenmalig instellen — e-mailnotificatie aanzetten:**
+1. In Netlify: **Site configuration → Forms → Form notifications**
+   (of **Forms → Settings → Notifications**).
+2. **Add notification → Email notification**.
+3. Vul in: `info@levidegoochelaar.nl` → opslaan.
+
+Vanaf dan krijg je bij elke aanvraag automatisch een mail, en kun je alles ook
+teruglezen in het Netlify-dashboard onder **Forms**. Na versturen ziet de
+bezoeker de pagina `bedankt.html`.
+
+> Let op: de mail komt pas aan als `info@levidegoochelaar.nl` daadwerkelijk
+> bestaat. Zorg dat dat mailadres is ingesteld bij je domein-/mailprovider.
+
 ---
 
 _Gemaakt met oog voor detail — veel plezier en succes met je optredens! ✨_
