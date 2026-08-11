@@ -49,12 +49,30 @@
     "eyebrow": "Voor elke gelegenheid",
     "heading": "Waar magie het verschil maakt",
     "items": [
-      { "title": "Bruiloften", "text": "Verras je gasten tijdens het borreluur of laat de avond magisch beginnen." },
-      { "title": "Bedrijfsfeesten", "text": "Ideaal ijsbreker die collega's en relaties met elkaar in gesprek brengt." },
-      { "title": "Festivals & events", "text": "Rondlopende magie die de sfeer op je terrein naar een hoger niveau tilt." },
-      { "title": "Verjaardagen", "text": "Van kinderfeestjes tot mijlpalen: een verrassing die niemand verwacht." },
-      { "title": "Jubilea", "text": "Een bijzonder moment magisch onderstrepen, precies op maat gemaakt." },
-      { "title": "Iets anders?", "text": "Vertel me over je plannen — samen maken we er iets magisch van." }
+      {
+        "title": "Bruiloften",
+        "text": "Verras je gasten tijdens het borreluur of laat de avond magisch beginnen."
+      },
+      {
+        "title": "Bedrijfsfeesten",
+        "text": "Ideaal ijsbreker die collega's en relaties met elkaar in gesprek brengt."
+      },
+      {
+        "title": "Festivals & events",
+        "text": "Rondlopende magie die de sfeer op je terrein naar een hoger niveau tilt."
+      },
+      {
+        "title": "Verjaardagen",
+        "text": "Van kinderfeestjes tot mijlpalen: een verrassing die niemand verwacht."
+      },
+      {
+        "title": "Jubilea",
+        "text": "Een bijzonder moment magisch onderstrepen, precies op maat gemaakt."
+      },
+      {
+        "title": "Iets anders?",
+        "text": "Vertel me over je plannen — samen maken we er iets magisch van."
+      }
     ]
   },
   "gallery": {
@@ -62,19 +80,32 @@
     "heading": "Foto's",
     "sub": "Een indruk van optredens en momenten.",
     "images": [
-      { "image": "/assets/img/event-trio.jpg", "alt": "Levi in driedelig pak met twee anderen" },
-      { "image": "/assets/img/event-piano.jpg", "alt": "Levi speelt piano tijdens een event" },
-      { "image": "/assets/img/logo-square.png", "alt": "Levi de Goochelaar logo" },
-      { "image": "/assets/img/levi-portret.jpg", "alt": "Portret van Levi" }
+      {
+        "image": "/assets/img/logo-square.png",
+        "alt": "Levi de Goochelaar logo"
+      },
+      {
+        "image": "/assets/img/levi-portret.jpg",
+        "alt": "Portret van Levi"
+      }
     ]
   },
   "reviews": {
     "eyebrow": "Wat anderen zeggen",
     "heading": "Reviews",
     "items": [
-      { "quote": "\"Levi maakte van onze bruiloft een onvergetelijke dag. Onze gasten hebben het er nóg over!\"", "author": "— Sanne & Tom" },
-      { "quote": "\"Perfecte ijsbreker op ons bedrijfsevent. Professioneel, grappig en écht verbluffend.\"", "author": "— Marloes, HR-manager" },
-      { "quote": "\"De kinderen (en de ouders!) zaten aan zijn lippen. Absolute aanrader voor elk feest.\"", "author": "— Familie Jansen" }
+      {
+        "quote": "\"Levi maakte van onze bruiloft een onvergetelijke dag. Onze gasten hebben het er nóg over!\"",
+        "author": "— Sanne & Tom"
+      },
+      {
+        "quote": "\"Perfecte ijsbreker op ons bedrijfsevent. Professioneel, grappig en écht verbluffend.\"",
+        "author": "— Marloes, HR-manager"
+      },
+      {
+        "quote": "\"De kinderen (en de ouders!) zaten aan zijn lippen. Absolute aanrader voor elk feest.\"",
+        "author": "— Familie Jansen"
+      }
     ]
   },
   "contact": {
