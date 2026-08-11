@@ -122,5 +122,6 @@ collections:
               - { label: "Kop", name: "heading", widget: "string" }
               - { label: "Inleidende tekst", name: "intro", widget: "text" }
               - { label: "E-mailadres", name: "email", widget: "string" }
+              - { label: "Telefoonnummer", name: "phone", widget: "string", required: false }
               - { label: "Detail — locatie", name: "detailLocation", widget: "string" }
               - { label: "Detail — reactietijd", name: "detailResponse", widget: "string" }

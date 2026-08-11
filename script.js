@@ -27,6 +27,10 @@
         if (el.hasAttribute("data-cms-email")) {
           el.setAttribute("href", "mailto:" + value);
         }
+        // Telefoonnummer: maak er een klikbare bel-link van
+        if (el.hasAttribute("data-cms-phone")) {
+          el.setAttribute("href", "tel:" + value.replace(/[^0-9+]/g, ""));
+        }
       }
     });
 
