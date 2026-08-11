@@ -96,11 +96,16 @@ Dit is nodig zodat jij (en niemand anders) kunt inloggen op `/admin`.
 3. Pas aan wat je wilt en klik **Publiceren**.
 4. Even wachten — je wijziging staat live.
 
-## 🖼️ Foto's vervangen
-Foto's vervang je (voorlopig) in de map `assets/img/`: zet een nieuw bestand
-neer met dezelfde naam, of pas de verwijzing in `index.html` aan. Houd bestanden
-klein (max ~1600px breed) zodat de site snel blijft. (Wil je foto's ook via het
-beheerpaneel kunnen wisselen? Dat kan ik toevoegen.)
+## 🖼️ Foto's beheren (via /admin)
+Foto's ga je net als teksten via het beheerpaneel beheren:
+- **Galerij:** open **Website → Teksten van de website → Foto's**. Onder "Foto's
+  in de galerij" kun je foto's **toevoegen** (Add), **verwijderen** (prullenbak),
+  **herschikken** (slepen) en per foto een nieuwe afbeelding **uploaden**.
+- **Portretfoto** (bij "Over Levi") en de **illustratie bovenaan** (Hero) vervang
+  je in diezelfde secties met het foto-veld.
+
+Geüploade foto's komen in de map `assets/img/uploads/`. Houd bestanden bij
+voorkeur klein (max ~1600px breed) zodat de site snel blijft laden.
 
 ---
 

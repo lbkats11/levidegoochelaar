@@ -36,6 +36,7 @@ collections:
               - { label: "Inleidende tekst", name: "lead", widget: "text" }
               - { label: "Knop 1 (tekst)", name: "ctaPrimary", widget: "string" }
               - { label: "Knop 2 (tekst)", name: "ctaSecondary", widget: "string" }
+              - { label: "Illustratie/foto bovenaan", name: "figure", widget: "image", required: false }
 
           - label: "Over Levi"
             name: "about"
@@ -51,6 +52,7 @@ collections:
                 field: { label: "Kenmerk", name: "item", widget: "string" }
               - { label: "Badge — getal", name: "badgeNumber", widget: "string" }
               - { label: "Badge — tekst", name: "badgeLabel", widget: "string" }
+              - { label: "Portretfoto", name: "portrait", widget: "image", required: false }
 
           - label: "Shows"
             name: "shows"
@@ -81,13 +83,20 @@ collections:
                   - { label: "Titel", name: "title", widget: "string" }
                   - { label: "Beschrijving", name: "text", widget: "text" }
 
-          - label: "Foto's (kopteksten)"
+          - label: "Foto's"
             name: "gallery"
             widget: "object"
             fields:
               - { label: "Bovenschrift", name: "eyebrow", widget: "string" }
               - { label: "Kop", name: "heading", widget: "string" }
               - { label: "Ondertitel", name: "sub", widget: "string" }
+              - label: "Foto's in de galerij"
+                name: "images"
+                label_singular: "Foto"
+                widget: "list"
+                fields:
+                  - { label: "Foto", name: "image", widget: "image" }
+                  - { label: "Omschrijving (voor toegankelijkheid)", name: "alt", widget: "string", required: false }
 
           - label: "Reviews"
             name: "reviews"

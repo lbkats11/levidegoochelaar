@@ -5,7 +5,8 @@
     "titleBottom": "voor iedereen",
     "lead": "Verbazing op armlengte. Ik betover je gasten met close-up magie, een verrassende podiumshow en momenten die nog wekenlang het gesprek van de dag zijn.",
     "ctaPrimary": "Boek een optreden",
-    "ctaSecondary": "Bekijk de shows"
+    "ctaSecondary": "Bekijk de shows",
+    "figure": "/assets/img/levi-figure.png"
   },
   "about": {
     "eyebrow": "Maak kennis",
@@ -18,7 +19,8 @@
       "Ervaren met publiek van jong tot oud"
     ],
     "badgeNumber": "100+",
-    "badgeLabel": "optredens per jaar"
+    "badgeLabel": "optredens per jaar",
+    "portrait": "/assets/img/levi-portret.jpg"
   },
   "shows": {
     "eyebrow": "Wat ik doe",
@@ -58,7 +60,13 @@
   "gallery": {
     "eyebrow": "In actie",
     "heading": "Foto's",
-    "sub": "Een indruk van optredens en momenten."
+    "sub": "Een indruk van optredens en momenten.",
+    "images": [
+      { "image": "/assets/img/event-trio.jpg", "alt": "Levi in driedelig pak met twee anderen" },
+      { "image": "/assets/img/event-piano.jpg", "alt": "Levi speelt piano tijdens een event" },
+      { "image": "/assets/img/logo-square.png", "alt": "Levi de Goochelaar logo" },
+      { "image": "/assets/img/levi-portret.jpg", "alt": "Portret van Levi" }
+    ]
   },
   "reviews": {
     "eyebrow": "Wat anderen zeggen",

@@ -15,7 +15,12 @@
   function applyContent(data) {
     document.querySelectorAll("[data-cms]").forEach(function (el) {
       var value = resolvePath(data, el.getAttribute("data-cms"));
-      if (typeof value === "string") {
+      if (typeof value !== "string" || value === "") return;
+
+      if (el.tagName === "IMG") {
+        // Afbeelding: vervang de bronlink
+        el.setAttribute("src", value);
+      } else {
         el.textContent = value;
         // E-mailadres: werk ook de mailto-link en het formulier bij
         if (el.hasAttribute("data-cms-email")) {
@@ -24,6 +29,29 @@
           if (form) form.setAttribute("action", "mailto:" + value);
         }
       }
+    });
+
+    renderGallery(data);
+  }
+
+  // Bouwt de fotogalerij opnieuw op uit content/site.json,
+  // zodat foto's via /admin toe te voegen, te verwijderen en te herschikken zijn.
+  function renderGallery(data) {
+    var gallery = document.getElementById("gallery");
+    var images = data && data.gallery && data.gallery.images;
+    if (!gallery || !Array.isArray(images) || images.length === 0) return;
+
+    gallery.innerHTML = "";
+    images.forEach(function (item) {
+      if (!item || !item.image) return;
+      var fig = document.createElement("figure");
+      fig.className = "gallery__item is-visible";
+      var img = document.createElement("img");
+      img.src = item.image;
+      img.alt = item.alt || "Foto van Levi de Goochelaar";
+      img.loading = "lazy";
+      fig.appendChild(img);
+      gallery.appendChild(fig);
     });
   }
 
