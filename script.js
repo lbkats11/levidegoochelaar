@@ -30,7 +30,59 @@
       }
     });
 
+    renderShows(data);
+    renderOccasions(data);
     renderGallery(data);
+  }
+
+  // Bouwt de shows-kaarten opnieuw op uit content/site.json,
+  // zodat shows via /admin toe te voegen, te verwijderen en te herschikken zijn.
+  function renderShows(data) {
+    var list = document.getElementById("showsList");
+    var items = data && data.shows && data.shows.items;
+    if (!list || !Array.isArray(items) || items.length === 0) return;
+
+    list.innerHTML = "";
+    items.forEach(function (item) {
+      if (!item || !item.title) return;
+      var card = document.createElement("article");
+      card.className = "card is-visible";
+      var icon = document.createElement("div");
+      icon.className = "card__icon";
+      icon.textContent = item.icon || "✨";
+      var h3 = document.createElement("h3");
+      h3.textContent = item.title;
+      var p = document.createElement("p");
+      p.textContent = item.text || "";
+      card.appendChild(icon);
+      card.appendChild(h3);
+      card.appendChild(p);
+      list.appendChild(card);
+    });
+  }
+
+  // Bouwt de gelegenheden opnieuw op uit content/site.json.
+  function renderOccasions(data) {
+    var list = document.getElementById("occasionsList");
+    var items = data && data.occasions && data.occasions.items;
+    if (!list || !Array.isArray(items) || items.length === 0) return;
+
+    list.innerHTML = "";
+    items.forEach(function (item) {
+      if (!item || !item.title) return;
+      var box = document.createElement("div");
+      box.className = "occasion is-visible";
+      var span = document.createElement("span");
+      span.textContent = item.icon || "✨";
+      var h3 = document.createElement("h3");
+      h3.textContent = item.title;
+      var p = document.createElement("p");
+      p.textContent = item.text || "";
+      box.appendChild(span);
+      box.appendChild(h3);
+      box.appendChild(p);
+      list.appendChild(box);
+    });
   }
 
   // Bouwt de fotogalerij opnieuw op uit content/site.json,

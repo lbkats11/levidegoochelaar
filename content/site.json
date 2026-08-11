@@ -28,14 +28,17 @@
     "sub": "Elke show is aan te passen aan je publiek, locatie en tijdsduur.",
     "items": [
       {
+        "icon": "🃏",
         "title": "Close-up magie",
         "text": "Magie die letterlijk in de handen van je gasten gebeurt. Perfect als rondlopend entertainment tijdens een borrel, diner of receptie."
       },
       {
+        "icon": "🎭",
         "title": "Podiumshow",
         "text": "Een meeslepende show vol humor, verbazing en interactie. Een klapper als hoofdprogramma of gouden randje voor je evenement."
       },
       {
+        "icon": "🧠",
         "title": "Mentalisme",
         "text": "Gedachten die worden geraden en voorspellingen die uitkomen. Verfijnde magie die je gasten laat twijfelen aan wat écht mogelijk is."
       }
@@ -46,26 +49,32 @@
     "heading": "Waar magie het verschil maakt",
     "items": [
       {
+        "icon": "💍",
         "title": "Bruiloften",
         "text": "Verras je gasten tijdens het borreluur of laat de avond magisch beginnen."
       },
       {
+        "icon": "🏢",
         "title": "Bedrijfsfeesten",
         "text": "Ideaal ijsbreker die collega's en relaties met elkaar in gesprek brengt."
       },
       {
+        "icon": "🎪",
         "title": "Festivals & events",
         "text": "Rondlopende magie die de sfeer op je terrein naar een hoger niveau tilt."
       },
       {
+        "icon": "🎂",
         "title": "Verjaardagen",
         "text": "Van kinderfeestjes tot mijlpalen: een verrassing die niemand verwacht."
       },
       {
+        "icon": "🥂",
         "title": "Jubilea",
         "text": "Een bijzonder moment magisch onderstrepen, precies op maat gemaakt."
       },
       {
+        "icon": "✨",
         "title": "Iets anders?",
         "text": "Vertel me over je plannen — samen maken we er iets magisch van."
       }

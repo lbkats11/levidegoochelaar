@@ -66,6 +66,7 @@ collections:
                 widget: "list"
                 summary: "{{fields.title}}"
                 fields:
+                  - { label: "Pictogram (emoji)", name: "icon", widget: "string", required: false, hint: "Plak een emoji, bijv. 🃏 🎭 🧠" }
                   - { label: "Titel", name: "title", widget: "string" }
                   - { label: "Beschrijving", name: "text", widget: "text" }
 
@@ -80,6 +81,7 @@ collections:
                 widget: "list"
                 summary: "{{fields.title}}"
                 fields:
+                  - { label: "Pictogram (emoji)", name: "icon", widget: "string", required: false, hint: "Plak een emoji, bijv. 💍 🏢 🎪" }
                   - { label: "Titel", name: "title", widget: "string" }
                   - { label: "Beschrijving", name: "text", widget: "text" }
 
