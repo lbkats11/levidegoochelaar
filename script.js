@@ -110,6 +110,8 @@
     var images = data && data.gallery && data.gallery.images;
     if (!gallery || !Array.isArray(images) || images.length === 0) return;
 
+    // aantal foto's meegeven zodat de opmaak zich kan aanpassen
+    gallery.setAttribute("data-count", String(images.length));
     gallery.innerHTML = "";
     images.forEach(function (item) {
       if (!item || !item.image) return;

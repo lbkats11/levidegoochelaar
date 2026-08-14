@@ -197,6 +197,13 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.1; lett
 .gallery__item:hover img { transform: scale(1.06); }
 .gallery__item--tall { grid-row: span 2; }
 
+/* Eén foto: groot en helder tonen (volledige aandacht, niet bijgesneden) */
+.gallery[data-count="1"] { grid-template-columns: 1fr; grid-auto-rows: auto; max-width: 900px; margin-inline: auto; }
+.gallery[data-count="1"] .gallery__item img { height: auto; width: 100%; object-fit: contain; max-height: 78vh; }
+/* Twee of drie foto's: ruimer, en netjes afbrekend op smalle schermen */
+.gallery[data-count="2"] { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); grid-auto-rows: 320px; max-width: 960px; margin-inline: auto; }
+.gallery[data-count="3"] { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); grid-auto-rows: 280px; }
+
 /* ===== Reviews ===== */
 .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
 .review {
